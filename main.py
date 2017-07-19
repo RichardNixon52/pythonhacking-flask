@@ -40,11 +40,11 @@ def form():
         return render_template('form.html')
 
 
-@app.route('/pattern')
-def pattern():
+@app.route('/templates')
+def templates():
     shopping_list = ['milk', 'eggs']
     some_dict = {'costam': 'hahaha, jednak nie'}
-    return render_template('pattern.html',
+    return render_template('templates.html',
                            haha=some_dict,
                            zakupy=shopping_list)
 
