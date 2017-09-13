@@ -13,6 +13,7 @@ class Task(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
     date_due = db.Column(db.DateTime)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    is_done = db.Column(db.Boolean)
 
     @staticmethod
     def newest(num: int) -> list:
